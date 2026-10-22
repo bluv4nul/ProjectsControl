@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>Top</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапкаФормы" id="7">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ЦветОсновной</BackColor>
+			<ExtendedTooltip name="ГруппаШапкаФормыРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияЗаголовок" id="1">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветТекстаНаТемном</TextColor>
+					<Font ref="style:ШрифтЗаголовка" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Каталог товаров</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>商品目录</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЗаголовокКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ДекорацияЗаголовокРасширеннаяПодсказка" id="3"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияПодзаголовок" id="4">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветАкцент</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выберите товар в списке — справа появится его фотография, цена и остаток</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>在列表中选择商品——右侧将显示其照片、价格和库存</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПодзаголовокКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДекорацияПодзаголовокРасширеннаяПодсказка" id="6"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОсновная" id="48">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<Table name="Список" id="21">
+					<Representation>Tree</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<DefaultItem>true</DefaultItem>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<InitialTreeView>ExpandAllLevels</InitialTreeView>
+					<DataPath>Список</DataPath>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>false</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="СписокКонтекстноеМеню" id="31"/>
+					<AutoCommandBar name="СписокКоманднаяПанель" id="32"/>
+					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="33"/>
+					<SearchStringAddition name="СписокСтрокаПоиска" id="22">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="23"/>
+						<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="24"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокСостояниеПросмотра" id="25">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="26"/>
+						<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="27"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокУправлениеПоиском" id="28">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="29"/>
+						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="30"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="Наименование" id="9">
+							<DataPath>Список.Description</DataPath>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="11"/>
+						</LabelField>
+						<LabelField name="Артикул" id="12">
+							<DataPath>Список.Артикул</DataPath>
+							<ContextMenu name="АртикулКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="АртикулРасширеннаяПодсказка" id="14"/>
+						</LabelField>
+						<LabelField name="Производитель" id="15">
+							<DataPath>Список.Производитель</DataPath>
+							<ContextMenu name="ПроизводительКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ПроизводительРасширеннаяПодсказка" id="17"/>
+						</LabelField>
+						<LabelField name="Код" id="18">
+							<DataPath>Список.Code</DataPath>
+							<ContextMenu name="КодКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="20"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ГруппаКарточка" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Карточка товара</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>商品卡片</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>style:ЦветСиний</TitleTextColor>
+					<TitleFont ref="style:ШрифтЖирный" kind="StyleItem"/>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<BackColor>style:ЦветФонаСветлый</BackColor>
+					<ExtendedTooltip name="ГруппаКарточкаРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<PictureField name="Фото" id="34">
+							<DataPath>АдресФото</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>28</Width>
+							<Height>10</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<PictureSize>Proportionally</PictureSize>
+							<ContextMenu name="ФотоКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ФотоРасширеннаяПодсказка" id="36"/>
+						</PictureField>
+						<LabelDecoration name="ДекорацияНаименование" id="37">
+							<Width>28</Width>
+							<TextColor>style:ЦветОсновной</TextColor>
+							<Font ref="style:ШрифтЖирный" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выберите товар в списке</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>请在列表中选择商品</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНаименованиеКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ДекорацияНаименованиеРасширеннаяПодсказка" id="39"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияЦена" id="40">
+							<TextColor>style:ЦветСиний</TextColor>
+							<Font ref="style:ШрифтКрупный" kind="StyleItem"/>
+							<ContextMenu name="ДекорацияЦенаКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ДекорацияЦенаРасширеннаяПодсказка" id="42"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияОстаток" id="43">
+							<TextColor>style:ЦветОсновной</TextColor>
+							<ContextMenu name="ДекорацияОстатокКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ДекорацияОстатокРасширеннаяПодсказка" id="45"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Номенклатура</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="АдресФото" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

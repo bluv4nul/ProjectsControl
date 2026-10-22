@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<PictureDecoration name="ДекорацияБаннер" id="1">
+			<Width>100</Width>
+			<Height>6</Height>
+			<HorizontalStretch>true</HorizontalStretch>
+			<PictureSize>Proportionally</PictureSize>
+			<Picture>
+				<xr:Ref>CommonPicture.Баннер</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="ДекорацияБаннерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДекорацияБаннерРасширеннаяПодсказка" id="3"/>
+		</PictureDecoration>
+		<LabelDecoration name="ДекорацияПриветствие" id="4">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextColor>style:ЦветОсновной</TextColor>
+			<Font ref="style:ШрифтКрупный" kind="StyleItem"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Здравствуйте!</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>您好！</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияПриветствиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДекорацияПриветствиеРасширеннаяПодсказка" id="6"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаБыстрыеДействия" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые действия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>快捷操作</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:ЦветСиний</TitleTextColor>
+			<TitleFont ref="style:ШрифтЖирный" kind="StyleItem"/>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаБыстрыеДействияРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<Button name="КнопкаНовыйПриход" id="7">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.НовыйПриход</CommandName>
+					<TextColor>style:ЦветТекстаНаТемном</TextColor>
+					<BackColor>style:ЦветСиний</BackColor>
+					<ExtendedTooltip name="КнопкаНовыйПриходРасширеннаяПодсказка" id="8"/>
+				</Button>
+				<Button name="КнопкаНоваяПродажа" id="9">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.НоваяПродажа</CommandName>
+					<TextColor>style:ЦветТекстаНаТемном</TextColor>
+					<BackColor>style:ЦветСиний</BackColor>
+					<ExtendedTooltip name="КнопкаНоваяПродажаРасширеннаяПодсказка" id="10"/>
+				</Button>
+				<Button name="КнопкаЦены" id="11">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОткрытьЦены</CommandName>
+					<TextColor>style:ЦветТекстаНаТемном</TextColor>
+					<BackColor>style:ЦветСиний</BackColor>
+					<ExtendedTooltip name="КнопкаЦеныРасширеннаяПодсказка" id="12"/>
+				</Button>
+				<Button name="КнопкаОстатки" id="13">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОткрытьОстатки</CommandName>
+					<TextColor>style:ЦветТекстаНаТемном</TextColor>
+					<BackColor>style:ЦветСиний</BackColor>
+					<ExtendedTooltip name="КнопкаОстаткиРасширеннаяПодсказка" id="14"/>
+				</Button>
+				<Button name="КнопкаПродажи" id="15">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОткрытьПродажи</CommandName>
+					<TextColor>style:ЦветТекстаНаТемном</TextColor>
+					<BackColor>style:ЦветСиний</BackColor>
+					<ExtendedTooltip name="КнопкаПродажиРасширеннаяПодсказка" id="16"/>
+				</Button>
+				<Button name="КнопкаОбновить" id="17">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Обновить</CommandName>
+					<ExtendedTooltip name="КнопкаОбновитьРасширеннаяПодсказка" id="18"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПоказатели" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показатели</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>指标</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:ЦветСиний</TitleTextColor>
+			<TitleFont ref="style:ШрифтЖирный" kind="StyleItem"/>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаПоказателиРасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКарточкаТовары" id="30">
+					<Width>22</Width>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>style:ЦветФонаСветлый</BackColor>
+					<ExtendedTooltip name="ГруппаКарточкаТоварыРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПодписьТоварыЗаголовок" id="21">
+							<TextColor>style:ЦветОсновной</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Товаров в каталоге</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>目录中的商品</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодписьТоварыЗаголовокКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ДекорацияПодписьТоварыЗаголовокРасширеннаяПодсказка" id="23"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияЗначениеТовары" id="24">
+							<TextColor>style:ЦветСиний</TextColor>
+							<Font ref="style:ШрифтПоказателя" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>0</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>0</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияЗначениеТоварыКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ДекорацияЗначениеТоварыРасширеннаяПодсказка" id="26"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияПодписьТовары" id="27">
+							<TextColor>style:ЦветНеПроведен</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>позиций номенклатуры</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>个商品品种</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодписьТоварыКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ДекорацияПодписьТоварыРасширеннаяПодсказка" id="29"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКарточкаСклад" id="41">
+					<Width>22</Width>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>style:ЦветФонаСветлый</BackColor>
+					<ExtendedTooltip name="ГруппаКарточкаСкладРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПодписьСкладЗаголовок" id="32">
+							<TextColor>style:ЦветОсновной</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остаток на складе</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>仓库库存</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодписьСкладЗаголовокКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ДекорацияПодписьСкладЗаголовокРасширеннаяПодсказка" id="34"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияЗначениеСклад" id="35">
+							<TextColor>style:ЦветСиний</TextColor>
+							<Font ref="style:ШрифтПоказателя" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>0</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>0</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияЗначениеСкладКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ДекорацияЗначениеСкладРасширеннаяПодсказка" id="37"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияПодписьСклад" id="38">
+							<TextColor>style:ЦветНеПроведен</TextColor>
+							<ContextMenu name="ДекорацияПодписьСкладКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ДекорацияПодписьСкладРасширеннаяПодсказка" id="40"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКарточкаВыручка" id="52">
+					<Width>22</Width>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>style:ЦветФонаСветлый</BackColor>
+					<ExtendedTooltip name="ГруппаКарточкаВыручкаРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПодписьВыручкаЗаголовок" id="43">
+							<TextColor>style:ЦветОсновной</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выручка за месяц</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>本月收入</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодписьВыручкаЗаголовокКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ДекорацияПодписьВыручкаЗаголовокРасширеннаяПодсказка" id="45"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияЗначениеВыручка" id="46">
+							<TextColor>style:ЦветСиний</TextColor>
+							<Font ref="style:ШрифтПоказателя" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>0</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>0</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияЗначениеВыручкаКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ДекорацияЗначениеВыручкаРасширеннаяПодсказка" id="48"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияПодписьВыручка" id="49">
+							<TextColor>style:ЦветНеПроведен</TextColor>
+							<ContextMenu name="ДекорацияПодписьВыручкаКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ДекорацияПодписьВыручкаРасширеннаяПодсказка" id="51"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКарточкаПрибыль" id="63">
+					<Width>22</Width>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>style:ЦветФонаСветлый</BackColor>
+					<ExtendedTooltip name="ГруппаКарточкаПрибыльРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПодписьПрибыльЗаголовок" id="54">
+							<TextColor>style:ЦветОсновной</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Валовая прибыль за месяц</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>本月毛利</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодписьПрибыльЗаголовокКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ДекорацияПодписьПрибыльЗаголовокРасширеннаяПодсказка" id="56"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияЗначениеПрибыль" id="57">
+							<TextColor>style:ЦветСиний</TextColor>
+							<Font ref="style:ШрифтПоказателя" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>0</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>0</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияЗначениеПрибыльКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ДекорацияЗначениеПрибыльРасширеннаяПодсказка" id="59"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияПодписьПрибыль" id="60">
+							<TextColor>style:ЦветНеПроведен</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>выручка минус себестоимость</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>收入减去成本</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодписьПрибыльКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ДекорацияПодписьПрибыльРасширеннаяПодсказка" id="62"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаМалоНаСкладе" id="86">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заканчиваются на складе (меньше 3 шт.) — пора заказать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>库存即将用完（少于3件）——该订货了</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:ЦветСиний</TitleTextColor>
+			<TitleFont ref="style:ШрифтЖирный" kind="StyleItem"/>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаМалоНаСкладеРасширеннаяПодсказка" id="87"/>
+			<ChildItems>
+				<Table name="МалоНаСкладе" id="73">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ReadOnly>true</ReadOnly>
+					<HeightInTableRows>5</HeightInTableRows>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<VerticalStretch>false</VerticalStretch>
+					<DataPath>МалоНаСкладе</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="МалоНаСкладеКонтекстноеМеню" id="83"/>
+					<AutoCommandBar name="МалоНаСкладеКоманднаяПанель" id="84"/>
+					<ExtendedTooltip name="МалоНаСкладеРасширеннаяПодсказка" id="85"/>
+					<SearchStringAddition name="МалоНаСкладеСтрокаПоиска" id="74">
+						<AdditionSource>
+							<Item>МалоНаСкладе</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МалоНаСкладеСтрокаПоискаКонтекстноеМеню" id="75"/>
+						<ExtendedTooltip name="МалоНаСкладеСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="МалоНаСкладеСостояниеПросмотра" id="77">
+						<AdditionSource>
+							<Item>МалоНаСкладе</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МалоНаСкладеСостояниеПросмотраКонтекстноеМеню" id="78"/>
+						<ExtendedTooltip name="МалоНаСкладеСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="МалоНаСкладеУправлениеПоиском" id="80">
+						<AdditionSource>
+							<Item>МалоНаСкладе</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="МалоНаСкладеУправлениеПоискомКонтекстноеМеню" id="81"/>
+						<ExtendedTooltip name="МалоНаСкладеУправлениеПоискомРасширеннаяПодсказка" id="82"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">МалоНаСкладеВыбор</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="МалоНаСкладеНоменклатура" id="67">
+							<DataPath>МалоНаСкладе.Номенклатура</DataPath>
+							<Width>45</Width>
+							<ContextMenu name="МалоНаСкладеНоменклатураКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="МалоНаСкладеНоменклатураРасширеннаяПодсказка" id="69"/>
+						</LabelField>
+						<LabelField name="МалоНаСкладеОстаток" id="70">
+							<DataPath>МалоНаСкладе.Остаток</DataPath>
+							<Width>10</Width>
+							<ContextMenu name="МалоНаСкладеОстатокКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="МалоНаСкладеОстатокРасширеннаяПодсказка" id="72"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="МалоНаСкладе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мало на складе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>库存不足</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товар</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>商品</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Остаток" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток, шт.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>库存（件）</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НовыйПриход" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новое поступление</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>新建入库</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новое поступление</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>新建入库</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НовыйПриход</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="НоваяПродажа" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новая продажа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>新建销售</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новая продажа</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>新建销售</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НоваяПродажа</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОткрытьЦены" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цены товаров</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>商品价格</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цены товаров</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>商品价格</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьЦены</Action>
+		</Command>
+		<Command name="ОткрытьОстатки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки на складе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>仓库库存</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остатки на складе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>仓库库存</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьОстатки</Action>
+		</Command>
+		<Command name="ОткрытьПродажи" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Анализ продаж</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>销售分析</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Анализ продаж</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>销售分析</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьПродажи</Action>
+		</Command>
+		<Command name="Обновить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>刷新</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>刷新</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>

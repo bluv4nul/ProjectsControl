@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>Top</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапкаФормы" id="7">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ЦветОсновной</BackColor>
+			<ExtendedTooltip name="ГруппаШапкаФормыРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияЗаголовок" id="1">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветТекстаНаТемном</TextColor>
+					<Font ref="style:ШрифтЗаголовка" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Брони товаров</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>商品预订列表</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЗаголовокКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ДекорацияЗаголовокРасширеннаяПодсказка" id="3"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияПодзаголовок" id="4">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветАкцент</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние брони: активна, просрочена (срок истёк, товар ещё в резерве), выкуплена или отменена</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>预订状态：有效、已过期（期限已到，商品仍预留）、已购买或已取消</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПодзаголовокКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДекорацияПодзаголовокРасширеннаяПодсказка" id="6"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Список" id="33">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<DataPath>Список</DataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="43"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="44"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="45"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="34">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="37">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="40">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="42"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СписокДата" id="9">
+					<DataPath>Список.Дата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>日期</v8:content>
+						</v8:item>
+					</Title>
+					<Width>14</Width>
+					<ContextMenu name="СписокДатаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="СписокДатаРасширеннаяПодсказка" id="11"/>
+				</LabelField>
+				<LabelField name="СписокНомер" id="12">
+					<DataPath>Список.Номер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>编号</v8:content>
+						</v8:item>
+					</Title>
+					<Width>9</Width>
+					<ContextMenu name="СписокНомерКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="СписокНомерРасширеннаяПодсказка" id="14"/>
+				</LabelField>
+				<LabelField name="СписокПокупатель" id="15">
+					<DataPath>Список.Покупатель</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Покупатель</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>客户</v8:content>
+						</v8:item>
+					</Title>
+					<Width>26</Width>
+					<ContextMenu name="СписокПокупательКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="СписокПокупательРасширеннаяПодсказка" id="17"/>
+				</LabelField>
+				<LabelField name="СписокСрокБрони" id="18">
+					<DataPath>Список.СрокБрони</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действует до</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>有效期至</v8:content>
+						</v8:item>
+					</Title>
+					<Width>11</Width>
+					<ContextMenu name="СписокСрокБрониКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="СписокСрокБрониРасширеннаяПодсказка" id="20"/>
+				</LabelField>
+				<LabelField name="СписокСостояние" id="21">
+					<DataPath>Список.Состояние</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>状态</v8:content>
+						</v8:item>
+					</Title>
+					<Width>19</Width>
+					<ContextMenu name="СписокСостояниеКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="СписокСостояниеРасширеннаяПодсказка" id="23"/>
+				</LabelField>
+				<LabelField name="СписокВРезерве" id="24">
+					<DataPath>Список.ВРезерве</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В резерве, шт.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>预留（件）</v8:content>
+						</v8:item>
+					</Title>
+					<Width>9</Width>
+					<ContextMenu name="СписокВРезервеКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="СписокВРезервеРасширеннаяПодсказка" id="26"/>
+				</LabelField>
+				<LabelField name="СписокСуммаДокумента" id="27">
+					<DataPath>Список.СуммаДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>金额</v8:content>
+						</v8:item>
+					</Title>
+					<Width>13</Width>
+					<ContextMenu name="СписокСуммаДокументаКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="СписокСуммаДокументаРасширеннаяПодсказка" id="29"/>
+				</LabelField>
+				<LabelField name="СписокКомментарий" id="30">
+					<DataPath>Список.Комментарий</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>备注</v8:content>
+						</v8:item>
+					</Title>
+					<Width>22</Width>
+					<ContextMenu name="СписокКомментарийКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="СписокКомментарийРасширеннаяПодсказка" id="32"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Док.Ссылка КАК Ссылка,
+	Док.Дата КАК Дата,
+	Док.Номер КАК Номер,
+	Док.Проведен КАК Проведен,
+	Док.ПометкаУдаления КАК ПометкаУдаления,
+	Док.Покупатель КАК Покупатель,
+	Док.СрокБрони КАК СрокБрони,
+	Док.СуммаДокумента КАК СуммаДокумента,
+	Док.Комментарий КАК Комментарий,
+	ЕСТЬNULL(Движения.ВРезерве, 0) КАК ВРезерве,
+	ВЫБОР
+		КОГДА НЕ Док.Проведен
+			ТОГДА 0
+		КОГДА ЕСТЬNULL(Движения.ВРезерве, 0) &gt; 0
+				И Док.СрокБрони &lt; &amp;ТекущаяДата
+			ТОГДА 2
+		КОГДА ЕСТЬNULL(Движения.ВРезерве, 0) &gt; 0
+			ТОГДА 1
+		КОГДА ЕСТЬNULL(Движения.Отменено, 0) = 0
+			ТОГДА 3
+		КОГДА ЕСТЬNULL(Движения.Выкуплено, 0) = 0
+			ТОГДА 4
+		ИНАЧЕ 5
+	КОНЕЦ КАК КодСостояния,
+	ВЫБОР
+		КОГДА НЕ Док.Проведен
+			ТОГДА &amp;Состояние0
+		КОГДА ЕСТЬNULL(Движения.ВРезерве, 0) &gt; 0
+				И Док.СрокБрони &lt; &amp;ТекущаяДата
+			ТОГДА &amp;Состояние2
+		КОГДА ЕСТЬNULL(Движения.ВРезерве, 0) &gt; 0
+				И ЕСТЬNULL(Движения.Выкуплено, 0) + ЕСТЬNULL(Движения.Отменено, 0) &gt; 0
+			ТОГДА &amp;Состояние6
+		КОГДА ЕСТЬNULL(Движения.ВРезерве, 0) &gt; 0
+			ТОГДА &amp;Состояние1
+		КОГДА ЕСТЬNULL(Движения.Отменено, 0) = 0
+			ТОГДА &amp;Состояние3
+		КОГДА ЕСТЬNULL(Движения.Выкуплено, 0) = 0
+			ТОГДА &amp;Состояние4
+		ИНАЧЕ &amp;Состояние5
+	КОНЕЦ КАК Состояние
+ИЗ
+	Документ.Бронирование КАК Док
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			Р.Бронирование КАК Бронирование,
+			СУММА(ВЫБОР
+					КОГДА Р.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+						ТОГДА Р.Количество
+					ИНАЧЕ -Р.Количество
+				КОНЕЦ) КАК ВРезерве,
+			СУММА(ВЫБОР
+					КОГДА Р.Регистратор ССЫЛКА Документ.Расход
+						ТОГДА Р.Количество
+					ИНАЧЕ 0
+				КОНЕЦ) КАК Выкуплено,
+			СУММА(ВЫБОР
+					КОГДА Р.Регистратор ССЫЛКА Документ.ОтменаБронирования
+						ТОГДА Р.Количество
+					ИНАЧЕ 0
+				КОНЕЦ) КАК Отменено
+		ИЗ
+			РегистрНакопления.ТоварыВРезерве КАК Р
+		ГДЕ
+			Р.Активность
+		СГРУППИРОВАТЬ ПО
+			Р.Бронирование) КАК Движения
+		ПО Док.Ссылка = Движения.Бронирование</QueryText>
+				<MainTable>Document.Бронирование</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

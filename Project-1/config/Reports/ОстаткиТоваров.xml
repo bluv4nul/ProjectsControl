@@ -38,11 +38,11 @@
 			<Explanation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Текущие остатки товаров на складе в количестве и деньгах</v8:content>
+					<v8:content>Остатки на складе, товары в резерве и свободный остаток</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>zh</v8:lang>
-					<v8:content>仓库商品当前库存（数量和金额）</v8:content>
+					<v8:content>仓库库存、预留商品和可售库存</v8:content>
 				</v8:item>
 			</Explanation>
 		</Properties>

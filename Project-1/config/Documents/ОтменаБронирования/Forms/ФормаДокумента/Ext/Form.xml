@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапкаФормы" id="7">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ЦветОсновной</BackColor>
+			<ExtendedTooltip name="ГруппаШапкаФормыРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияЗаголовок" id="1">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветТекстаНаТемном</TextColor>
+					<Font ref="style:ШрифтЗаголовка" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена брони</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>取消预订</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЗаголовокКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ДекорацияЗаголовокРасширеннаяПодсказка" id="3"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияПодзаголовок" id="4">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветАкцент</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Укажите бронь и причину. Товары из брони вернутся в свободный остаток</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>请指定预订和原因。预订中的商品将返回可售库存</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПодзаголовокКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДекорацияПодзаголовокРасширеннаяПодсказка" id="6"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРеквизиты" id="26">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНомерДата" id="15">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<InputField name="Номер" id="9">
+							<DataPath>Объект.Number</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>编号</v8:content>
+								</v8:item>
+							</Title>
+							<Width>9</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="НомерКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="11"/>
+						</InputField>
+						<InputField name="Дата" id="12">
+							<DataPath>Объект.Date</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>от</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>zh</v8:lang>
+									<v8:content>日期</v8:content>
+								</v8:item>
+							</Title>
+							<Width>14</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="14"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Бронирование" id="17">
+					<DataPath>Объект.Бронирование</DataPath>
+					<ContextMenu name="БронированиеКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="БронированиеРасширеннаяПодсказка" id="19"/>
+					<Events>
+						<Event name="OnChange">БронированиеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="ДекорацияБронь" id="20">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветСиний</TextColor>
+					<ContextMenu name="ДекорацияБроньКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДекорацияБроньРасширеннаяПодсказка" id="22"/>
+				</LabelDecoration>
+				<InputField name="Причина" id="23">
+					<DataPath>Объект.Причина</DataPath>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ПричинаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПричинаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Товары" id="37">
+			<Representation>List</Representation>
+			<HeightInTableRows>6</HeightInTableRows>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<DataPath>Объект.Товары</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТоварыКонтекстноеМеню" id="47"/>
+			<AutoCommandBar name="ТоварыКоманднаяПанель" id="48"/>
+			<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="49"/>
+			<SearchStringAddition name="ТоварыСтрокаПоиска" id="38">
+				<AdditionSource>
+					<Item>Товары</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТоварыСтрокаПоискаКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ТоварыСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТоварыСостояниеПросмотра" id="41">
+				<AdditionSource>
+					<Item>Товары</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТоварыСостояниеПросмотраКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="ТоварыСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТоварыУправлениеПоиском" id="44">
+				<AdditionSource>
+					<Item>Товары</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТоварыУправлениеПоискомКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТоварыНомерСтроки" id="28">
+					<DataPath>Объект.Товары.LineNumber</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>序号</v8:content>
+						</v8:item>
+					</Title>
+					<Width>3</Width>
+					<ContextMenu name="ТоварыНомерСтрокиКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ТоварыНомерСтрокиРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<InputField name="ТоварыНоменклатура" id="31">
+					<DataPath>Объект.Товары.Номенклатура</DataPath>
+					<Width>45</Width>
+					<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<InputField name="ТоварыКоличество" id="34">
+					<DataPath>Объект.Товары.Количество</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Снять с брони, шт.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>取消数量（件）</v8:content>
+						</v8:item>
+					</Title>
+					<Width>12</Width>
+					<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="36"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="50">
+			<DataPath>Объект.Комментарий</DataPath>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="52"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ОтменаБронирования</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

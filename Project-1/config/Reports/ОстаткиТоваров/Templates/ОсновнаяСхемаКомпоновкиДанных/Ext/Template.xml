@@ -40,11 +40,51 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Остаток, шт.</v8:content>
+					<v8:content>На складе, шт.</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>zh</v8:lang>
 					<v8:content>库存（件）</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВРезерве</dataPath>
+			<field>ВРезерве</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В резерве, шт.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>预留（件）</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Свободно</dataPath>
+			<field>Свободно</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свободно, шт.</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>可售（件）</v8:content>
 				</v8:item>
 			</title>
 			<appearance>
@@ -119,17 +159,35 @@
 	Остатки.Номенклатура КАК Номенклатура,
 	Остатки.Номенклатура.Родитель КАК Группа,
 	Остатки.КоличествоОстаток КАК Количество,
+	ЕСТЬNULL(Резерв.Количество, 0) КАК ВРезерве,
+	Остатки.КоличествоОстаток - ЕСТЬNULL(Резерв.Количество, 0) КАК Свободно,
 	Остатки.СуммаОстаток КАК Себестоимость,
 	ЕСТЬNULL(Цены.Цена, 0) КАК ЦенаПродажи,
 	Остатки.КоличествоОстаток * ЕСТЬNULL(Цены.Цена, 0) КАК СуммаВЦенахПродажи
 ИЗ
 	РегистрНакопления.ОстаткиТоваров.Остатки(, ) КАК Остатки
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Цены.СрезПоследних(, ) КАК Цены
-		ПО Остатки.Номенклатура = Цены.Номенклатура</query>
+		ПО Остатки.Номенклатура = Цены.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			Р.Номенклатура КАК Номенклатура,
+			СУММА(Р.КоличествоОстаток) КАК Количество
+		ИЗ
+			РегистрНакопления.ТоварыВРезерве.Остатки(, ) КАК Р
+		СГРУППИРОВАТЬ ПО
+			Р.Номенклатура) КАК Резерв
+		ПО Остатки.Номенклатура = Резерв.Номенклатура</query>
 	</dataSet>
 	<totalField>
 		<dataPath>Количество</dataPath>
 		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВРезерве</dataPath>
+		<expression>Сумма(ВРезерве)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Свободно</dataPath>
+		<expression>Сумма(Свободно)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>Себестоимость</dataPath>
@@ -148,6 +206,12 @@
 					<dcsset:field>Количество</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВРезерве</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Свободно</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ЦенаПродажи</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -162,7 +226,7 @@
 					<dcsset:selection/>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Количество</dcsset:left>
+							<dcsset:left xsi:type="dcscor:Field">Свободно</dcsset:left>
 							<dcsset:comparisonType>Less</dcsset:comparisonType>
 							<dcsset:right xsi:type="xs:decimal">3</dcsset:right>
 						</dcsset:item>

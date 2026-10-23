@@ -53,7 +53,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>Команда проекта «ВольтМаркет»</Vendor>
-			<Version>1.0.0</Version>
+			<Version>1.1.0</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -251,11 +251,11 @@
 			<DetailedInformation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Учебная информационная система «ВольтМаркет»: справочники товаров (с фотографиями), покупателей, поставщиков и организаций; документы прихода и расхода; цены, остатки и анализ продаж.</v8:content>
+					<v8:content>Учебная информационная система «ВольтМаркет»: справочники товаров (с фотографиями), покупателей, поставщиков и организаций; документы прихода, расхода и бронирования; цены, остатки, резерв и анализ продаж.</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>zh</v8:lang>
-					<v8:content>教学信息系统「伏特商城 VoltMarket」：商品（含照片）、客户、供应商和公司基础资料；入库和出库单据；价格、库存和销售分析。</v8:content>
+					<v8:content>教学信息系统「伏特商城」：商品（含照片）、客户、供应商和公司资料；入库、销售和预订单据；价格、库存、预留和销售分析。</v8:content>
 				</v8:item>
 			</DetailedInformation>
 			<Copyright>
@@ -284,6 +284,7 @@
 			<Language>Китайский</Language>
 			<Subsystem>Покупка</Subsystem>
 			<Subsystem>Продажа</Subsystem>
+			<Subsystem>Бронирование</Subsystem>
 			<Subsystem>Аналитика</Subsystem>
 			<Subsystem>Справочники</Subsystem>
 			<StyleItem>ЦветОсновной</StyleItem>
@@ -303,6 +304,7 @@
 			<CommonPicture>НетФото</CommonPicture>
 			<CommonPicture>РазделПокупка</CommonPicture>
 			<CommonPicture>РазделПродажа</CommonPicture>
+			<CommonPicture>РазделБронирование</CommonPicture>
 			<CommonPicture>РазделАналитика</CommonPicture>
 			<CommonPicture>РазделСправочники</CommonPicture>
 			<Role>ПолныеПрава</Role>
@@ -310,21 +312,27 @@
 			<Role>Продажа</Role>
 			<CommonTemplate>ДемоФото</CommonTemplate>
 			<CommonModule>РаботаСЦенами</CommonModule>
+			<CommonModule>РаботаСБронями</CommonModule>
 			<CommonModule>ПечатьДокументов</CommonModule>
 			<CommonModule>ДемоДанные</CommonModule>
 			<CommonForm>РабочийСтол</CommonForm>
+			<CommonForm>ПодборТоваров</CommonForm>
 			<Catalog>Организации</Catalog>
 			<Catalog>Поставщики</Catalog>
 			<Catalog>Покупатели</Catalog>
 			<Catalog>Номенклатура</Catalog>
 			<Document>Приход</Document>
 			<Document>Расход</Document>
+			<Document>Бронирование</Document>
+			<Document>ОтменаБронирования</Document>
 			<Enum>ВидыПокупателей</Enum>
 			<Report>ОстаткиТоваров</Report>
+			<Report>Брони</Report>
 			<Report>Продажи</Report>
 			<InformationRegister>Цены</InformationRegister>
 			<AccumulationRegister>ОстаткиТоваров</AccumulationRegister>
 			<AccumulationRegister>Продажи</AccumulationRegister>
+			<AccumulationRegister>ТоварыВРезерве</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

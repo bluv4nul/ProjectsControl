@@ -47,6 +47,13 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonForm.ПодборТоваров</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.Приход</name>
 		<right>
 			<name>Read</name>
@@ -220,6 +227,17 @@
 		</right>
 		<right>
 			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ТоварыВРезерве</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>

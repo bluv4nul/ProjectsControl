@@ -3,6 +3,7 @@
 	<SubsystemsOrder>
 		<Subsystem>Subsystem.Покупка</Subsystem>
 		<Subsystem>Subsystem.Продажа</Subsystem>
+		<Subsystem>Subsystem.Бронирование</Subsystem>
 		<Subsystem>Subsystem.Аналитика</Subsystem>
 		<Subsystem>Subsystem.Справочники</Subsystem>
 	</SubsystemsOrder>

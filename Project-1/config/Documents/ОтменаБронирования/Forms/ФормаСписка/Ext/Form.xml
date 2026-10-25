@@ -39,11 +39,11 @@
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Каждая отмена возвращает товары брони в свободный остаток</v8:content>
+							<v8:content>Каждая отмена возвращает товары брони в свободный остаток. «Авто» — бронь снята регламентным заданием, когда истёк её срок</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>zh</v8:lang>
-							<v8:content>每次取消都会将预订商品返回可售库存</v8:content>
+							<v8:content>每次取消都会将预订商品返回可售库存。「自动」— 预订到期后由计划任务取消</v8:content>
 						</v8:item>
 					</Title>
 					<ContextMenu name="ДекорацияПодзаголовокКонтекстноеМеню" id="5"/>
@@ -51,7 +51,7 @@
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
-		<Table name="Список" id="24">
+		<Table name="Список" id="27">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
@@ -71,32 +71,32 @@
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
 			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
-			<ContextMenu name="СписокКонтекстноеМеню" id="34"/>
-			<AutoCommandBar name="СписокКоманднаяПанель" id="35"/>
-			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="36"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="25">
+			<ContextMenu name="СписокКонтекстноеМеню" id="37"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="38"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="39"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="28">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="26"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="27"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="30"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="28">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="31">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="29"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="30"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="31">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="34">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="32"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="33"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="36"/>
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="СписокДата" id="9">
@@ -139,15 +139,31 @@
 				</LabelField>
 				<LabelField name="СписокПричина" id="18">
 					<DataPath>Список.Причина</DataPath>
-					<Width>35</Width>
+					<Width>30</Width>
 					<ContextMenu name="СписокПричинаКонтекстноеМеню" id="19"/>
 					<ExtendedTooltip name="СписокПричинаРасширеннаяПодсказка" id="20"/>
 				</LabelField>
-				<LabelField name="СписокКомментарий" id="21">
+				<CheckBoxField name="СписокАвтоматически" id="21">
+					<DataPath>Список.Автоматически</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Авто</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>自动</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокАвтоматическиКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="СписокАвтоматическиРасширеннаяПодсказка" id="23"/>
+				</CheckBoxField>
+				<LabelField name="СписокКомментарий" id="24">
 					<DataPath>Список.Комментарий</DataPath>
 					<Width>20</Width>
-					<ContextMenu name="СписокКомментарийКонтекстноеМеню" id="22"/>
-					<ExtendedTooltip name="СписокКомментарийРасширеннаяПодсказка" id="23"/>
+					<ContextMenu name="СписокКомментарийКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="СписокКомментарийРасширеннаяПодсказка" id="26"/>
 				</LabelField>
 			</ChildItems>
 		</Table>

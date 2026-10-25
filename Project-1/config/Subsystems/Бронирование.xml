@@ -34,8 +34,10 @@
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.Бронирование</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтменаБронирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.АвтоснятиеБроней</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Покупатели</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Брони</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДоступностьТоваров</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиТоваров</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыВРезерве</xr:Item>
 			</Content>

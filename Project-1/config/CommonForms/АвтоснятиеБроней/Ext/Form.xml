@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапкаФормы" id="7">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ЦветОсновной</BackColor>
+			<ExtendedTooltip name="ГруппаШапкаФормыРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияЗаголовок" id="1">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветТекстаНаТемном</TextColor>
+					<Font ref="style:ШрифтЗаголовка" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автоснятие просроченных броней</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>自动取消过期预订</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЗаголовокКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ДекорацияЗаголовокРасширеннаяПодсказка" id="3"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияПодзаголовок" id="4">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветАкцент</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регламентное задание по расписанию снимает брони с истёкшим сроком: товар возвращается в свободный остаток</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>计划任务按计划取消已过期的预订：商品返回可售库存</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПодзаголовокКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДекорацияПодзаголовокРасширеннаяПодсказка" id="6"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗадание" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регламентное задание «Снятие просроченных броней»</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>计划任务「取消过期预订」</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:ЦветСиний</TitleTextColor>
+			<TitleFont ref="style:ШрифтЖирный" kind="StyleItem"/>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<BackColor>style:ЦветФонаСветлый</BackColor>
+			<ExtendedTooltip name="ГруппаЗаданиеРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<CheckBoxField name="Использование" id="9">
+					<DataPath>Использование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Снимать просроченные брони автоматически</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>自动取消过期预订</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользованиеКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ИспользованиеРасширеннаяПодсказка" id="11"/>
+					<Events>
+						<Event name="OnChange">ИспользованиеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаРасписание" id="17">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРасписаниеРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияРасписание" id="12">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:ЦветОсновной</TextColor>
+							<Font ref="style:ШрифтЖирный" kind="StyleItem"/>
+							<ContextMenu name="ДекорацияРасписаниеКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="ДекорацияРасписаниеРасширеннаяПодсказка" id="14"/>
+						</LabelDecoration>
+						<Button name="КнопкаИзменитьРасписание" id="15">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ИзменитьРасписание</CommandName>
+							<ExtendedTooltip name="КнопкаИзменитьРасписаниеРасширеннаяПодсказка" id="16"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="ДекорацияПоследнийЗапуск" id="19">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветОсновной</TextColor>
+					<ContextMenu name="ДекорацияПоследнийЗапускКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДекорацияПоследнийЗапускРасширеннаяПодсказка" id="21"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияПодсказка" id="22">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>2</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветНеПроведен</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задание проводит документ «Отмена брони» с причиной «Истёк срок брони»: движение по регистру накопления «Товары в резерве». У частично выкупленной брони снимается только остаток. В файловой базе задание выполняется, пока открыт хотя бы один сеанс 1С:Предприятия.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>任务以「预订已过期」为原因过账「取消预订」单据：在累计登记簿「预留商品」中记录变动。部分已购买的预订只取消剩余部分。在文件型数据库中，只有至少打开一个 1C:Enterprise 会话时任务才会运行。</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПодсказкаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДекорацияПодсказкаРасширеннаяПодсказка" id="24"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКнопки" id="34">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<Button name="КнопкаВыполнитьСейчас" id="27">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВыполнитьСейчас</CommandName>
+					<TextColor>style:ЦветТекстаНаТемном</TextColor>
+					<BackColor>style:ЦветСиний</BackColor>
+					<ExtendedTooltip name="КнопкаВыполнитьСейчасРасширеннаяПодсказка" id="28"/>
+				</Button>
+				<Button name="КнопкаОбновить" id="29">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Обновить</CommandName>
+					<ExtendedTooltip name="КнопкаОбновитьРасширеннаяПодсказка" id="30"/>
+				</Button>
+				<LabelDecoration name="ДекорацияРезультат" id="31">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>style:ЦветСиний</TextColor>
+					<Font ref="style:ШрифтЖирный" kind="StyleItem"/>
+					<ContextMenu name="ДекорацияРезультатКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ДекорацияРезультатРасширеннаяПодсказка" id="33"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТаблицы" id="90">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТаблицыРасширеннаяПодсказка" id="91"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПросроченные" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидают снятия (срок истёк, товар в резерве)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>等待取消（已过期，商品仍预留）</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>style:ЦветСиний</TitleTextColor>
+					<TitleFont ref="style:ШрифтЖирный" kind="StyleItem"/>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ГруппаПросроченныеРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<Table name="Просроченные" id="48">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
+							<HeightInTableRows>7</HeightInTableRows>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<DataPath>Просроченные</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПросроченныеКонтекстноеМеню" id="58"/>
+							<AutoCommandBar name="ПросроченныеКоманднаяПанель" id="59"/>
+							<ExtendedTooltip name="ПросроченныеРасширеннаяПодсказка" id="60"/>
+							<SearchStringAddition name="ПросроченныеСтрокаПоиска" id="49">
+								<AdditionSource>
+									<Item>Просроченные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПросроченныеСтрокаПоискаКонтекстноеМеню" id="50"/>
+								<ExtendedTooltip name="ПросроченныеСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПросроченныеСостояниеПросмотра" id="52">
+								<AdditionSource>
+									<Item>Просроченные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПросроченныеСостояниеПросмотраКонтекстноеМеню" id="53"/>
+								<ExtendedTooltip name="ПросроченныеСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПросроченныеУправлениеПоиском" id="55">
+								<AdditionSource>
+									<Item>Просроченные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПросроченныеУправлениеПоискомКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="ПросроченныеУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ПросроченныеВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ПросроченныеНомер" id="36">
+									<DataPath>Просроченные.Номер</DataPath>
+									<Width>10</Width>
+									<ContextMenu name="ПросроченныеНомерКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ПросроченныеНомерРасширеннаяПодсказка" id="38"/>
+								</LabelField>
+								<LabelField name="ПросроченныеПокупатель" id="39">
+									<DataPath>Просроченные.Покупатель</DataPath>
+									<Width>24</Width>
+									<ContextMenu name="ПросроченныеПокупательКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ПросроченныеПокупательРасширеннаяПодсказка" id="41"/>
+								</LabelField>
+								<LabelField name="ПросроченныеСрокБрони" id="42">
+									<DataPath>Просроченные.СрокБрони</DataPath>
+									<Width>10</Width>
+									<ContextMenu name="ПросроченныеСрокБрониКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ПросроченныеСрокБрониРасширеннаяПодсказка" id="44"/>
+								</LabelField>
+								<LabelField name="ПросроченныеКоличество" id="45">
+									<DataPath>Просроченные.Количество</DataPath>
+									<Width>8</Width>
+									<ContextMenu name="ПросроченныеКоличествоКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ПросроченныеКоличествоРасширеннаяПодсказка" id="47"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСнятые" id="88">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Снято автоматически</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>已自动取消</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>style:ЦветСиний</TitleTextColor>
+					<TitleFont ref="style:ШрифтЖирный" kind="StyleItem"/>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ГруппаСнятыеРасширеннаяПодсказка" id="89"/>
+					<ChildItems>
+						<Table name="Снятые" id="75">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
+							<HeightInTableRows>7</HeightInTableRows>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<DataPath>Снятые</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СнятыеКонтекстноеМеню" id="85"/>
+							<AutoCommandBar name="СнятыеКоманднаяПанель" id="86"/>
+							<ExtendedTooltip name="СнятыеРасширеннаяПодсказка" id="87"/>
+							<SearchStringAddition name="СнятыеСтрокаПоиска" id="76">
+								<AdditionSource>
+									<Item>Снятые</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СнятыеСтрокаПоискаКонтекстноеМеню" id="77"/>
+								<ExtendedTooltip name="СнятыеСтрокаПоискаРасширеннаяПодсказка" id="78"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СнятыеСостояниеПросмотра" id="79">
+								<AdditionSource>
+									<Item>Снятые</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СнятыеСостояниеПросмотраКонтекстноеМеню" id="80"/>
+								<ExtendedTooltip name="СнятыеСостояниеПросмотраРасширеннаяПодсказка" id="81"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СнятыеУправлениеПоиском" id="82">
+								<AdditionSource>
+									<Item>Снятые</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СнятыеУправлениеПоискомКонтекстноеМеню" id="83"/>
+								<ExtendedTooltip name="СнятыеУправлениеПоискомРасширеннаяПодсказка" id="84"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СнятыеВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СнятыеДата" id="63">
+									<DataPath>Снятые.Дата</DataPath>
+									<Width>14</Width>
+									<ContextMenu name="СнятыеДатаКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="СнятыеДатаРасширеннаяПодсказка" id="65"/>
+								</LabelField>
+								<LabelField name="СнятыеБронь" id="66">
+									<DataPath>Снятые.Номер</DataPath>
+									<Width>10</Width>
+									<ContextMenu name="СнятыеБроньКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="СнятыеБроньРасширеннаяПодсказка" id="68"/>
+								</LabelField>
+								<LabelField name="СнятыеПокупатель" id="69">
+									<DataPath>Снятые.Покупатель</DataPath>
+									<Width>24</Width>
+									<ContextMenu name="СнятыеПокупательКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="СнятыеПокупательРасширеннаяПодсказка" id="71"/>
+								</LabelField>
+								<LabelField name="СнятыеКоличество" id="72">
+									<DataPath>Снятые.Количество</DataPath>
+									<Width>8</Width>
+									<ContextMenu name="СнятыеКоличествоКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="СнятыеКоличествоРасширеннаяПодсказка" id="74"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Использование" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снимать просроченные брони автоматически</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>自动取消过期预订</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Просроченные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ожидают снятия</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>等待取消</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Бронирование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бронь</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>预订</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.Бронирование</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Номер" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№ брони</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>预订编号</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>11</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Покупатель" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Покупатель</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>客户</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Покупатели</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СрокБрони" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действовала до</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>有效期至</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Количество" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В резерве, шт.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>预留（件）</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Снятые" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снято автоматически</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>已自动取消</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Отмена" id="1">
+					<Type>
+						<v8:Type>cfg:DocumentRef.ОтменаБронирования</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Дата" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Снята</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>取消时间</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номер" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№ брони</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>预订编号</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>11</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Покупатель" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Покупатель</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>客户</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Покупатели</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Количество" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Снято, шт.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>zh</v8:lang>
+							<v8:content>已取消（件）</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьСейчас" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить сейчас</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>立即执行</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить сейчас</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>立即执行</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExecuteTask</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьСейчас</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ИзменитьРасписание" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить расписание</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>修改计划</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить расписание</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>修改计划</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ScheduledJob</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьРасписание</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Обновить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>刷新</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>刷新</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

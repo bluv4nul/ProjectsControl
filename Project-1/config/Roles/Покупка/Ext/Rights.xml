@@ -54,6 +54,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.ДоступностьТоваров</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.Приход</name>
 		<right>
 			<name>Read</name>

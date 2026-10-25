@@ -37,11 +37,11 @@
 			<ContextMenu name="ДекорацияПриветствиеКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ДекорацияПриветствиеРасширеннаяПодсказка" id="6"/>
 		</LabelDecoration>
-		<UsualGroup name="ГруппаБыстрыеДействия" id="27">
+		<UsualGroup name="ГруппаБыстрыеДействия" id="29">
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаБыстрыеДействияРасширеннаяПодсказка" id="28"/>
+			<ExtendedTooltip name="ГруппаБыстрыеДействияРасширеннаяПодсказка" id="30"/>
 			<ChildItems>
 				<UsualGroup name="ГруппаОформить" id="13">
 					<Title>
@@ -83,7 +83,7 @@
 						</Button>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаОткрыть" id="25">
+				<UsualGroup name="ГруппаОткрыть" id="27">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -98,7 +98,7 @@
 					<TitleFont ref="style:ШрифтЖирный" kind="StyleItem"/>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
-					<ExtendedTooltip name="ГруппаОткрытьРасширеннаяПодсказка" id="26"/>
+					<ExtendedTooltip name="ГруппаОткрытьРасширеннаяПодсказка" id="28"/>
 					<ChildItems>
 						<Button name="КнопкаБрони" id="15">
 							<Type>UsualButton</Type>
@@ -115,21 +115,26 @@
 							<CommandName>Form.Command.ОткрытьОстатки</CommandName>
 							<ExtendedTooltip name="КнопкаОстаткиРасширеннаяПодсказка" id="20"/>
 						</Button>
-						<Button name="КнопкаПродажи" id="21">
+						<Button name="КнопкаДоступность" id="21">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОткрытьДоступность</CommandName>
+							<ExtendedTooltip name="КнопкаДоступностьРасширеннаяПодсказка" id="22"/>
+						</Button>
+						<Button name="КнопкаПродажи" id="23">
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.ОткрытьПродажи</CommandName>
-							<ExtendedTooltip name="КнопкаПродажиРасширеннаяПодсказка" id="22"/>
+							<ExtendedTooltip name="КнопкаПродажиРасширеннаяПодсказка" id="24"/>
 						</Button>
-						<Button name="КнопкаОбновить" id="23">
+						<Button name="КнопкаОбновить" id="25">
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.Обновить</CommandName>
-							<ExtendedTooltip name="КнопкаОбновитьРасширеннаяПодсказка" id="24"/>
+							<ExtendedTooltip name="КнопкаОбновитьРасширеннаяПодсказка" id="26"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="ГруппаПоказатели" id="84">
+		<UsualGroup name="ГруппаПоказатели" id="86">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -144,17 +149,17 @@
 			<TitleFont ref="style:ШрифтЖирный" kind="StyleItem"/>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
-			<ExtendedTooltip name="ГруппаПоказателиРасширеннаяПодсказка" id="85"/>
+			<ExtendedTooltip name="ГруппаПоказателиРасширеннаяПодсказка" id="87"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаКарточкаТовары" id="38">
+				<UsualGroup name="ГруппаКарточкаТовары" id="40">
 					<Width>20</Width>
 					<Group>Vertical</Group>
 					<Representation>NormalSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<BackColor>style:ЦветФонаСветлый</BackColor>
-					<ExtendedTooltip name="ГруппаКарточкаТоварыРасширеннаяПодсказка" id="39"/>
+					<ExtendedTooltip name="ГруппаКарточкаТоварыРасширеннаяПодсказка" id="41"/>
 					<ChildItems>
-						<LabelDecoration name="ДекорацияПодписьТоварыЗаголовок" id="29">
+						<LabelDecoration name="ДекорацияПодписьТоварыЗаголовок" id="31">
 							<TextColor>style:ЦветОсновной</TextColor>
 							<Title formatted="false">
 								<v8:item>
@@ -166,10 +171,10 @@
 									<v8:content>目录中的商品</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияПодписьТоварыЗаголовокКонтекстноеМеню" id="30"/>
-							<ExtendedTooltip name="ДекорацияПодписьТоварыЗаголовокРасширеннаяПодсказка" id="31"/>
+							<ContextMenu name="ДекорацияПодписьТоварыЗаголовокКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ДекорацияПодписьТоварыЗаголовокРасширеннаяПодсказка" id="33"/>
 						</LabelDecoration>
-						<LabelDecoration name="ДекорацияЗначениеТовары" id="32">
+						<LabelDecoration name="ДекорацияЗначениеТовары" id="34">
 							<TextColor>style:ЦветСиний</TextColor>
 							<Font ref="style:ШрифтПоказателя" kind="StyleItem"/>
 							<Title formatted="false">
@@ -182,10 +187,10 @@
 									<v8:content>0</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияЗначениеТоварыКонтекстноеМеню" id="33"/>
-							<ExtendedTooltip name="ДекорацияЗначениеТоварыРасширеннаяПодсказка" id="34"/>
+							<ContextMenu name="ДекорацияЗначениеТоварыКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ДекорацияЗначениеТоварыРасширеннаяПодсказка" id="36"/>
 						</LabelDecoration>
-						<LabelDecoration name="ДекорацияПодписьТовары" id="35">
+						<LabelDecoration name="ДекорацияПодписьТовары" id="37">
 							<TextColor>style:ЦветНеПроведен</TextColor>
 							<Title formatted="false">
 								<v8:item>
@@ -197,20 +202,20 @@
 									<v8:content>个商品品种</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияПодписьТоварыКонтекстноеМеню" id="36"/>
-							<ExtendedTooltip name="ДекорацияПодписьТоварыРасширеннаяПодсказка" id="37"/>
+							<ContextMenu name="ДекорацияПодписьТоварыКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ДекорацияПодписьТоварыРасширеннаяПодсказка" id="39"/>
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаКарточкаСклад" id="49">
+				<UsualGroup name="ГруппаКарточкаСклад" id="51">
 					<Width>20</Width>
 					<Group>Vertical</Group>
 					<Representation>NormalSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<BackColor>style:ЦветФонаСветлый</BackColor>
-					<ExtendedTooltip name="ГруппаКарточкаСкладРасширеннаяПодсказка" id="50"/>
+					<ExtendedTooltip name="ГруппаКарточкаСкладРасширеннаяПодсказка" id="52"/>
 					<ChildItems>
-						<LabelDecoration name="ДекорацияПодписьСкладЗаголовок" id="40">
+						<LabelDecoration name="ДекорацияПодписьСкладЗаголовок" id="42">
 							<TextColor>style:ЦветОсновной</TextColor>
 							<Title formatted="false">
 								<v8:item>
@@ -222,10 +227,10 @@
 									<v8:content>仓库库存</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияПодписьСкладЗаголовокКонтекстноеМеню" id="41"/>
-							<ExtendedTooltip name="ДекорацияПодписьСкладЗаголовокРасширеннаяПодсказка" id="42"/>
+							<ContextMenu name="ДекорацияПодписьСкладЗаголовокКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ДекорацияПодписьСкладЗаголовокРасширеннаяПодсказка" id="44"/>
 						</LabelDecoration>
-						<LabelDecoration name="ДекорацияЗначениеСклад" id="43">
+						<LabelDecoration name="ДекорацияЗначениеСклад" id="45">
 							<TextColor>style:ЦветСиний</TextColor>
 							<Font ref="style:ШрифтПоказателя" kind="StyleItem"/>
 							<Title formatted="false">
@@ -238,25 +243,25 @@
 									<v8:content>0</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияЗначениеСкладКонтекстноеМеню" id="44"/>
-							<ExtendedTooltip name="ДекорацияЗначениеСкладРасширеннаяПодсказка" id="45"/>
+							<ContextMenu name="ДекорацияЗначениеСкладКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ДекорацияЗначениеСкладРасширеннаяПодсказка" id="47"/>
 						</LabelDecoration>
-						<LabelDecoration name="ДекорацияПодписьСклад" id="46">
+						<LabelDecoration name="ДекорацияПодписьСклад" id="48">
 							<TextColor>style:ЦветНеПроведен</TextColor>
-							<ContextMenu name="ДекорацияПодписьСкладКонтекстноеМеню" id="47"/>
-							<ExtendedTooltip name="ДекорацияПодписьСкладРасширеннаяПодсказка" id="48"/>
+							<ContextMenu name="ДекорацияПодписьСкладКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="ДекорацияПодписьСкладРасширеннаяПодсказка" id="50"/>
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаКарточкаРезерв" id="60">
+				<UsualGroup name="ГруппаКарточкаРезерв" id="62">
 					<Width>20</Width>
 					<Group>Vertical</Group>
 					<Representation>NormalSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<BackColor>style:ЦветФонаСветлый</BackColor>
-					<ExtendedTooltip name="ГруппаКарточкаРезервРасширеннаяПодсказка" id="61"/>
+					<ExtendedTooltip name="ГруппаКарточкаРезервРасширеннаяПодсказка" id="63"/>
 					<ChildItems>
-						<LabelDecoration name="ДекорацияПодписьРезервЗаголовок" id="51">
+						<LabelDecoration name="ДекорацияПодписьРезервЗаголовок" id="53">
 							<TextColor>style:ЦветОсновной</TextColor>
 							<Title formatted="false">
 								<v8:item>
@@ -268,10 +273,10 @@
 									<v8:content>预订中的商品</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияПодписьРезервЗаголовокКонтекстноеМеню" id="52"/>
-							<ExtendedTooltip name="ДекорацияПодписьРезервЗаголовокРасширеннаяПодсказка" id="53"/>
+							<ContextMenu name="ДекорацияПодписьРезервЗаголовокКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ДекорацияПодписьРезервЗаголовокРасширеннаяПодсказка" id="55"/>
 						</LabelDecoration>
-						<LabelDecoration name="ДекорацияЗначениеРезерв" id="54">
+						<LabelDecoration name="ДекорацияЗначениеРезерв" id="56">
 							<TextColor>style:ЦветСиний</TextColor>
 							<Font ref="style:ШрифтПоказателя" kind="StyleItem"/>
 							<Title formatted="false">
@@ -284,25 +289,25 @@
 									<v8:content>0</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияЗначениеРезервКонтекстноеМеню" id="55"/>
-							<ExtendedTooltip name="ДекорацияЗначениеРезервРасширеннаяПодсказка" id="56"/>
+							<ContextMenu name="ДекорацияЗначениеРезервКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ДекорацияЗначениеРезервРасширеннаяПодсказка" id="58"/>
 						</LabelDecoration>
-						<LabelDecoration name="ДекорацияПодписьРезерв" id="57">
+						<LabelDecoration name="ДекорацияПодписьРезерв" id="59">
 							<TextColor>style:ЦветНеПроведен</TextColor>
-							<ContextMenu name="ДекорацияПодписьРезервКонтекстноеМеню" id="58"/>
-							<ExtendedTooltip name="ДекорацияПодписьРезервРасширеннаяПодсказка" id="59"/>
+							<ContextMenu name="ДекорацияПодписьРезервКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ДекорацияПодписьРезервРасширеннаяПодсказка" id="61"/>
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаКарточкаВыручка" id="71">
+				<UsualGroup name="ГруппаКарточкаВыручка" id="73">
 					<Width>20</Width>
 					<Group>Vertical</Group>
 					<Representation>NormalSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<BackColor>style:ЦветФонаСветлый</BackColor>
-					<ExtendedTooltip name="ГруппаКарточкаВыручкаРасширеннаяПодсказка" id="72"/>
+					<ExtendedTooltip name="ГруппаКарточкаВыручкаРасширеннаяПодсказка" id="74"/>
 					<ChildItems>
-						<LabelDecoration name="ДекорацияПодписьВыручкаЗаголовок" id="62">
+						<LabelDecoration name="ДекорацияПодписьВыручкаЗаголовок" id="64">
 							<TextColor>style:ЦветОсновной</TextColor>
 							<Title formatted="false">
 								<v8:item>
@@ -314,10 +319,10 @@
 									<v8:content>本月收入</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияПодписьВыручкаЗаголовокКонтекстноеМеню" id="63"/>
-							<ExtendedTooltip name="ДекорацияПодписьВыручкаЗаголовокРасширеннаяПодсказка" id="64"/>
+							<ContextMenu name="ДекорацияПодписьВыручкаЗаголовокКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ДекорацияПодписьВыручкаЗаголовокРасширеннаяПодсказка" id="66"/>
 						</LabelDecoration>
-						<LabelDecoration name="ДекорацияЗначениеВыручка" id="65">
+						<LabelDecoration name="ДекорацияЗначениеВыручка" id="67">
 							<TextColor>style:ЦветСиний</TextColor>
 							<Font ref="style:ШрифтПоказателя" kind="StyleItem"/>
 							<Title formatted="false">
@@ -330,25 +335,25 @@
 									<v8:content>0</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияЗначениеВыручкаКонтекстноеМеню" id="66"/>
-							<ExtendedTooltip name="ДекорацияЗначениеВыручкаРасширеннаяПодсказка" id="67"/>
+							<ContextMenu name="ДекорацияЗначениеВыручкаКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ДекорацияЗначениеВыручкаРасширеннаяПодсказка" id="69"/>
 						</LabelDecoration>
-						<LabelDecoration name="ДекорацияПодписьВыручка" id="68">
+						<LabelDecoration name="ДекорацияПодписьВыручка" id="70">
 							<TextColor>style:ЦветНеПроведен</TextColor>
-							<ContextMenu name="ДекорацияПодписьВыручкаКонтекстноеМеню" id="69"/>
-							<ExtendedTooltip name="ДекорацияПодписьВыручкаРасширеннаяПодсказка" id="70"/>
+							<ContextMenu name="ДекорацияПодписьВыручкаКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="ДекорацияПодписьВыручкаРасширеннаяПодсказка" id="72"/>
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаКарточкаПрибыль" id="82">
+				<UsualGroup name="ГруппаКарточкаПрибыль" id="84">
 					<Width>20</Width>
 					<Group>Vertical</Group>
 					<Representation>NormalSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
 					<BackColor>style:ЦветФонаСветлый</BackColor>
-					<ExtendedTooltip name="ГруппаКарточкаПрибыльРасширеннаяПодсказка" id="83"/>
+					<ExtendedTooltip name="ГруппаКарточкаПрибыльРасширеннаяПодсказка" id="85"/>
 					<ChildItems>
-						<LabelDecoration name="ДекорацияПодписьПрибыльЗаголовок" id="73">
+						<LabelDecoration name="ДекорацияПодписьПрибыльЗаголовок" id="75">
 							<TextColor>style:ЦветОсновной</TextColor>
 							<Title formatted="false">
 								<v8:item>
@@ -360,10 +365,10 @@
 									<v8:content>本月毛利</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияПодписьПрибыльЗаголовокКонтекстноеМеню" id="74"/>
-							<ExtendedTooltip name="ДекорацияПодписьПрибыльЗаголовокРасширеннаяПодсказка" id="75"/>
+							<ContextMenu name="ДекорацияПодписьПрибыльЗаголовокКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="ДекорацияПодписьПрибыльЗаголовокРасширеннаяПодсказка" id="77"/>
 						</LabelDecoration>
-						<LabelDecoration name="ДекорацияЗначениеПрибыль" id="76">
+						<LabelDecoration name="ДекорацияЗначениеПрибыль" id="78">
 							<TextColor>style:ЦветСиний</TextColor>
 							<Font ref="style:ШрифтПоказателя" kind="StyleItem"/>
 							<Title formatted="false">
@@ -376,10 +381,10 @@
 									<v8:content>0</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияЗначениеПрибыльКонтекстноеМеню" id="77"/>
-							<ExtendedTooltip name="ДекорацияЗначениеПрибыльРасширеннаяПодсказка" id="78"/>
+							<ContextMenu name="ДекорацияЗначениеПрибыльКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="ДекорацияЗначениеПрибыльРасширеннаяПодсказка" id="80"/>
 						</LabelDecoration>
-						<LabelDecoration name="ДекорацияПодписьПрибыль" id="79">
+						<LabelDecoration name="ДекорацияПодписьПрибыль" id="81">
 							<TextColor>style:ЦветНеПроведен</TextColor>
 							<Title formatted="false">
 								<v8:item>
@@ -391,20 +396,20 @@
 									<v8:content>收入减去成本</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияПодписьПрибыльКонтекстноеМеню" id="80"/>
-							<ExtendedTooltip name="ДекорацияПодписьПрибыльРасширеннаяПодсказка" id="81"/>
+							<ContextMenu name="ДекорацияПодписьПрибыльКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="ДекорацияПодписьПрибыльРасширеннаяПодсказка" id="83"/>
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="ГруппаТаблицы" id="139">
+		<UsualGroup name="ГруппаТаблицы" id="143">
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаТаблицыРасширеннаяПодсказка" id="140"/>
+			<ExtendedTooltip name="ГруппаТаблицыРасширеннаяПодсказка" id="144"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаМалоНаСкладе" id="107">
+				<UsualGroup name="ГруппаМалоНаСкладе" id="109">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -419,9 +424,9 @@
 					<TitleFont ref="style:ШрифтЖирный" kind="StyleItem"/>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
-					<ExtendedTooltip name="ГруппаМалоНаСкладеРасширеннаяПодсказка" id="108"/>
+					<ExtendedTooltip name="ГруппаМалоНаСкладеРасширеннаяПодсказка" id="110"/>
 					<ChildItems>
-						<Table name="МалоНаСкладе" id="92">
+						<Table name="МалоНаСкладе" id="94">
 							<Representation>List</Representation>
 							<CommandBarLocation>None</CommandBarLocation>
 							<ReadOnly>true</ReadOnly>
@@ -430,59 +435,59 @@
 							<VerticalStretch>false</VerticalStretch>
 							<DataPath>МалоНаСкладе</DataPath>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="МалоНаСкладеКонтекстноеМеню" id="102"/>
-							<AutoCommandBar name="МалоНаСкладеКоманднаяПанель" id="103"/>
-							<ExtendedTooltip name="МалоНаСкладеРасширеннаяПодсказка" id="104"/>
-							<SearchStringAddition name="МалоНаСкладеСтрокаПоиска" id="93">
+							<ContextMenu name="МалоНаСкладеКонтекстноеМеню" id="104"/>
+							<AutoCommandBar name="МалоНаСкладеКоманднаяПанель" id="105"/>
+							<ExtendedTooltip name="МалоНаСкладеРасширеннаяПодсказка" id="106"/>
+							<SearchStringAddition name="МалоНаСкладеСтрокаПоиска" id="95">
 								<AdditionSource>
 									<Item>МалоНаСкладе</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="МалоНаСкладеСтрокаПоискаКонтекстноеМеню" id="94"/>
-								<ExtendedTooltip name="МалоНаСкладеСтрокаПоискаРасширеннаяПодсказка" id="95"/>
+								<ContextMenu name="МалоНаСкладеСтрокаПоискаКонтекстноеМеню" id="96"/>
+								<ExtendedTooltip name="МалоНаСкладеСтрокаПоискаРасширеннаяПодсказка" id="97"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="МалоНаСкладеСостояниеПросмотра" id="96">
+							<ViewStatusAddition name="МалоНаСкладеСостояниеПросмотра" id="98">
 								<AdditionSource>
 									<Item>МалоНаСкладе</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="МалоНаСкладеСостояниеПросмотраКонтекстноеМеню" id="97"/>
-								<ExtendedTooltip name="МалоНаСкладеСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
+								<ContextMenu name="МалоНаСкладеСостояниеПросмотраКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="МалоНаСкладеСостояниеПросмотраРасширеннаяПодсказка" id="100"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="МалоНаСкладеУправлениеПоиском" id="99">
+							<SearchControlAddition name="МалоНаСкладеУправлениеПоиском" id="101">
 								<AdditionSource>
 									<Item>МалоНаСкладе</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="МалоНаСкладеУправлениеПоискомКонтекстноеМеню" id="100"/>
-								<ExtendedTooltip name="МалоНаСкладеУправлениеПоискомРасширеннаяПодсказка" id="101"/>
+								<ContextMenu name="МалоНаСкладеУправлениеПоискомКонтекстноеМеню" id="102"/>
+								<ExtendedTooltip name="МалоНаСкладеУправлениеПоискомРасширеннаяПодсказка" id="103"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">МалоНаСкладеВыбор</Event>
 							</Events>
 							<ChildItems>
-								<LabelField name="МалоНаСкладеНоменклатура" id="86">
+								<LabelField name="МалоНаСкладеНоменклатура" id="88">
 									<DataPath>МалоНаСкладе.Номенклатура</DataPath>
 									<Width>34</Width>
-									<ContextMenu name="МалоНаСкладеНоменклатураКонтекстноеМеню" id="87"/>
-									<ExtendedTooltip name="МалоНаСкладеНоменклатураРасширеннаяПодсказка" id="88"/>
+									<ContextMenu name="МалоНаСкладеНоменклатураКонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="МалоНаСкладеНоменклатураРасширеннаяПодсказка" id="90"/>
 								</LabelField>
-								<LabelField name="МалоНаСкладеСвободно" id="89">
+								<LabelField name="МалоНаСкладеСвободно" id="91">
 									<DataPath>МалоНаСкладе.Свободно</DataPath>
 									<Width>9</Width>
-									<ContextMenu name="МалоНаСкладеСвободноКонтекстноеМеню" id="90"/>
-									<ExtendedTooltip name="МалоНаСкладеСвободноРасширеннаяПодсказка" id="91"/>
+									<ContextMenu name="МалоНаСкладеСвободноКонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="МалоНаСкладеСвободноРасширеннаяПодсказка" id="93"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
-						<Button name="КнопкаДозаказ" id="105">
+						<Button name="КнопкаДозаказ" id="107">
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.Дозаказ</CommandName>
-							<ExtendedTooltip name="КнопкаДозаказРасширеннаяПодсказка" id="106"/>
+							<ExtendedTooltip name="КнопкаДозаказРасширеннаяПодсказка" id="108"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаАктивныеБрони" id="137">
+				<UsualGroup name="ГруппаАктивныеБрони" id="141">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -497,9 +502,9 @@
 					<TitleFont ref="style:ШрифтЖирный" kind="StyleItem"/>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
-					<ExtendedTooltip name="ГруппаАктивныеБрониРасширеннаяПодсказка" id="138"/>
+					<ExtendedTooltip name="ГруппаАктивныеБрониРасширеннаяПодсказка" id="142"/>
 					<ChildItems>
-						<Table name="АктивныеБрони" id="121">
+						<Table name="АктивныеБрони" id="123">
 							<Representation>List</Representation>
 							<CommandBarLocation>None</CommandBarLocation>
 							<ReadOnly>true</ReadOnly>
@@ -508,69 +513,74 @@
 							<VerticalStretch>false</VerticalStretch>
 							<DataPath>АктивныеБрони</DataPath>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="АктивныеБрониКонтекстноеМеню" id="131"/>
-							<AutoCommandBar name="АктивныеБрониКоманднаяПанель" id="132"/>
-							<ExtendedTooltip name="АктивныеБрониРасширеннаяПодсказка" id="133"/>
-							<SearchStringAddition name="АктивныеБрониСтрокаПоиска" id="122">
+							<ContextMenu name="АктивныеБрониКонтекстноеМеню" id="133"/>
+							<AutoCommandBar name="АктивныеБрониКоманднаяПанель" id="134"/>
+							<ExtendedTooltip name="АктивныеБрониРасширеннаяПодсказка" id="135"/>
+							<SearchStringAddition name="АктивныеБрониСтрокаПоиска" id="124">
 								<AdditionSource>
 									<Item>АктивныеБрони</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="АктивныеБрониСтрокаПоискаКонтекстноеМеню" id="123"/>
-								<ExtendedTooltip name="АктивныеБрониСтрокаПоискаРасширеннаяПодсказка" id="124"/>
+								<ContextMenu name="АктивныеБрониСтрокаПоискаКонтекстноеМеню" id="125"/>
+								<ExtendedTooltip name="АктивныеБрониСтрокаПоискаРасширеннаяПодсказка" id="126"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="АктивныеБрониСостояниеПросмотра" id="125">
+							<ViewStatusAddition name="АктивныеБрониСостояниеПросмотра" id="127">
 								<AdditionSource>
 									<Item>АктивныеБрони</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="АктивныеБрониСостояниеПросмотраКонтекстноеМеню" id="126"/>
-								<ExtendedTooltip name="АктивныеБрониСостояниеПросмотраРасширеннаяПодсказка" id="127"/>
+								<ContextMenu name="АктивныеБрониСостояниеПросмотраКонтекстноеМеню" id="128"/>
+								<ExtendedTooltip name="АктивныеБрониСостояниеПросмотраРасширеннаяПодсказка" id="129"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="АктивныеБрониУправлениеПоиском" id="128">
+							<SearchControlAddition name="АктивныеБрониУправлениеПоиском" id="130">
 								<AdditionSource>
 									<Item>АктивныеБрони</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="АктивныеБрониУправлениеПоискомКонтекстноеМеню" id="129"/>
-								<ExtendedTooltip name="АктивныеБрониУправлениеПоискомРасширеннаяПодсказка" id="130"/>
+								<ContextMenu name="АктивныеБрониУправлениеПоискомКонтекстноеМеню" id="131"/>
+								<ExtendedTooltip name="АктивныеБрониУправлениеПоискомРасширеннаяПодсказка" id="132"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">АктивныеБрониВыбор</Event>
 							</Events>
 							<ChildItems>
-								<LabelField name="АктивныеБрониНомер" id="109">
+								<LabelField name="АктивныеБрониНомер" id="111">
 									<DataPath>АктивныеБрони.Номер</DataPath>
 									<Width>11</Width>
-									<ContextMenu name="АктивныеБрониНомерКонтекстноеМеню" id="110"/>
-									<ExtendedTooltip name="АктивныеБрониНомерРасширеннаяПодсказка" id="111"/>
+									<ContextMenu name="АктивныеБрониНомерКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="АктивныеБрониНомерРасширеннаяПодсказка" id="113"/>
 								</LabelField>
-								<LabelField name="АктивныеБрониПокупатель" id="112">
+								<LabelField name="АктивныеБрониПокупатель" id="114">
 									<DataPath>АктивныеБрони.Покупатель</DataPath>
 									<Width>24</Width>
-									<ContextMenu name="АктивныеБрониПокупательКонтекстноеМеню" id="113"/>
-									<ExtendedTooltip name="АктивныеБрониПокупательРасширеннаяПодсказка" id="114"/>
+									<ContextMenu name="АктивныеБрониПокупательКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="АктивныеБрониПокупательРасширеннаяПодсказка" id="116"/>
 								</LabelField>
-								<LabelField name="АктивныеБрониСрокБрони" id="115">
+								<LabelField name="АктивныеБрониСрокБрони" id="117">
 									<DataPath>АктивныеБрони.СрокБрони</DataPath>
 									<Width>10</Width>
-									<ContextMenu name="АктивныеБрониСрокБрониКонтекстноеМеню" id="116"/>
-									<ExtendedTooltip name="АктивныеБрониСрокБрониРасширеннаяПодсказка" id="117"/>
+									<ContextMenu name="АктивныеБрониСрокБрониКонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="АктивныеБрониСрокБрониРасширеннаяПодсказка" id="119"/>
 								</LabelField>
-								<LabelField name="АктивныеБрониКоличество" id="118">
+								<LabelField name="АктивныеБрониКоличество" id="120">
 									<DataPath>АктивныеБрони.Количество</DataPath>
 									<Width>7</Width>
-									<ContextMenu name="АктивныеБрониКоличествоКонтекстноеМеню" id="119"/>
-									<ExtendedTooltip name="АктивныеБрониКоличествоРасширеннаяПодсказка" id="120"/>
+									<ContextMenu name="АктивныеБрониКоличествоКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="АктивныеБрониКоличествоРасширеннаяПодсказка" id="122"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
-						<LabelDecoration name="ДекорацияПросрочено" id="134">
+						<LabelDecoration name="ДекорацияПросрочено" id="136">
 							<AutoMaxWidth>false</AutoMaxWidth>
 							<TextColor>#C62828</TextColor>
-							<ContextMenu name="ДекорацияПросроченоКонтекстноеМеню" id="135"/>
-							<ExtendedTooltip name="ДекорацияПросроченоРасширеннаяПодсказка" id="136"/>
+							<ContextMenu name="ДекорацияПросроченоКонтекстноеМеню" id="137"/>
+							<ExtendedTooltip name="ДекорацияПросроченоРасширеннаяПодсказка" id="138"/>
 						</LabelDecoration>
+						<Button name="КнопкаАвтоснятие" id="139">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОткрытьАвтоснятие</CommandName>
+							<ExtendedTooltip name="КнопкаАвтоснятиеРасширеннаяПодсказка" id="140"/>
+						</Button>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -970,6 +980,57 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Дозаказ</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОткрытьДоступность" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток, забронировано, доступно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>库存、已预订、可售</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток, забронировано, доступно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>库存、已预订、可售</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьДоступность</Action>
+		</Command>
+		<Command name="ОткрытьАвтоснятие" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоснятие просроченных броней</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>自动取消过期预订</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоснятие просроченных броней</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>zh</v8:lang>
+					<v8:content>自动取消过期预订</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьАвтоснятие</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>

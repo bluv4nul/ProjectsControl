@@ -572,7 +572,7 @@
 						</Table>
 						<LabelDecoration name="ДекорацияПросрочено" id="136">
 							<AutoMaxWidth>false</AutoMaxWidth>
-							<TextColor>#C62828</TextColor>
+							<TextColor>style:ЦветПросрочено</TextColor>
 							<ContextMenu name="ДекорацияПросроченоКонтекстноеМеню" id="137"/>
 							<ExtendedTooltip name="ДекорацияПросроченоРасширеннаяПодсказка" id="138"/>
 						</LabelDecoration>

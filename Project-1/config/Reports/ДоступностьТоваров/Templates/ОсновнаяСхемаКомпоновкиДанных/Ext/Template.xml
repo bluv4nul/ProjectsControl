@@ -126,7 +126,16 @@
 	</totalField>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Все товары по группам</dcsset:presentation>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Все товары по группам</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>按分组的全部商品</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -152,11 +161,11 @@
 					<dcsset:appearance>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветФона</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFE8B3</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаПредупреждения</dcscor:value>
 						</dcscor:item>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#8A5A00</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветТекстаПредупреждения</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 				</dcsset:item>
@@ -230,7 +239,16 @@
 	</settingsVariant>
 	<settingsVariant>
 		<dcsset:name>Забронированные</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Только забронированные товары</dcsset:presentation>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Только забронированные товары</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>zh</v8:lang>
+				<v8:content>仅已预订商品</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -263,11 +281,11 @@
 					<dcsset:appearance>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветФона</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#FFE8B3</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаПредупреждения</dcscor:value>
 						</dcscor:item>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#8A5A00</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветТекстаПредупреждения</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 				</dcsset:item>

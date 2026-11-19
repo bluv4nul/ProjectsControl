@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Бронь и продажа" id="page1">
+    <mxGraphModel grid="1" page="1" pageWidth="960" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e0" parent="1" source="s" target="order" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" parent="1" source="order" target="stock" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" parent="1" source="stock" target="g" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" parent="1" source="g" target="reject" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=1.0;exitY=0.5;entryX=0.0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e4" parent="1" source="reject" target="no" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" parent="1" source="g" target="book" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" parent="1" source="book" target="action" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" parent="1" source="action" target="sale" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.0;exitY=0.5;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="185" y="614" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" parent="1" source="action" target="cancel" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=1.0;exitY=0.5;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="650" y="614" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" parent="1" source="sale" target="sold" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e10" parent="1" source="cancel" target="released" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="s" parent="1" vertex="1" value="" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;ellipse;fillColor=#ffffff;strokeWidth=1.5;">
+          <mxGeometry as="geometry" x="380" y="40" width="40" height="40" />
+        </mxCell>
+        <mxCell id="order" parent="1" vertex="1" value="Продавец: оформить&lt;br&gt;документ «Бронирование»" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rounded=1;fillColor=#e8f4ee;">
+          <mxGeometry as="geometry" x="267" y="109" width="264" height="69" />
+        </mxCell>
+        <mxCell id="stock" parent="1" vertex="1" value="1С: заблокировать данные&lt;br&gt;и проверить доступность" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rounded=1;fillColor=#e8f4ee;">
+          <mxGeometry as="geometry" x="262" y="226" width="274" height="69" />
+        </mxCell>
+        <mxCell id="g" parent="1" vertex="1" value="×" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rhombus;fillColor=#ffffff;fontSize=22;">
+          <mxGeometry as="geometry" x="373" y="356" width="53" height="53" />
+        </mxCell>
+        <mxCell id="reject" parent="1" vertex="1" value="1С: сообщить о нехватке.&lt;br&gt;Бронь не проведена" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rounded=1;fillColor=#e8f4ee;">
+          <mxGeometry as="geometry" x="605" y="348" width="252" height="69" />
+        </mxCell>
+        <mxCell id="no" parent="1" vertex="1" value="" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;ellipse;fillColor=#ffffff;strokeWidth=4;">
+          <mxGeometry as="geometry" x="711" y="464" width="40" height="40" />
+        </mxCell>
+        <mxCell id="book" parent="1" vertex="1" value="1С: записать резерв" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rounded=1;fillColor=#e8f4ee;">
+          <mxGeometry as="geometry" x="282" y="460" width="234" height="69" />
+        </mxCell>
+        <mxCell id="action" parent="1" vertex="1" value="×" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rhombus;fillColor=#ffffff;fontSize=22;">
+          <mxGeometry as="geometry" x="373" y="587" width="53" height="53" />
+        </mxCell>
+        <mxCell id="sale" parent="1" vertex="1" value="Продавец: провести&lt;br&gt;«Расход» по брони" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rounded=1;fillColor=#e8f4ee;">
+          <mxGeometry as="geometry" x="57" y="698" width="256" height="69" />
+        </mxCell>
+        <mxCell id="cancel" parent="1" vertex="1" value="Продавец: провести&lt;br&gt;«Отмену брони»" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rounded=1;fillColor=#e8f4ee;">
+          <mxGeometry as="geometry" x="522" y="698" width="256" height="69" />
+        </mxCell>
+        <mxCell id="sold" parent="1" vertex="1" value="" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;ellipse;fillColor=#ffffff;strokeWidth=4;">
+          <mxGeometry as="geometry" x="165" y="810" width="40" height="40" />
+        </mxCell>
+        <mxCell id="released" parent="1" vertex="1" value="" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;ellipse;fillColor=#ffffff;strokeWidth=4;">
+          <mxGeometry as="geometry" x="630" y="810" width="40" height="40" />
+        </mxCell>
+        <mxCell id="l0" parent="1" value="Запрос покупателя" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="448" y="50" width="161" height="23" />
+        </mxCell>
+        <mxCell id="l1" parent="1" value="Хватает товара?" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="189" y="366" width="138" height="23" />
+        </mxCell>
+        <mxCell id="l2" parent="1" value="Нет" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="474" y="350" width="74" height="23" />
+        </mxCell>
+        <mxCell id="l3" parent="1" value="Да" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="390" y="426" width="74" height="23" />
+        </mxCell>
+        <mxCell id="l4" parent="1" value="Выкуп" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="240" y="579" width="74" height="23" />
+        </mxCell>
+        <mxCell id="l5" parent="1" value="Отказ покупателя" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="461" y="579" width="150" height="23" />
+        </mxCell>
+        <mxCell id="l6" parent="1" value="Склад и резерв уменьшились" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="65" y="868" width="240" height="23" />
+        </mxCell>
+        <mxCell id="l7" parent="1" value="Товар снова свободен" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="557" y="868" width="187" height="23" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Автоснятие по сроку" id="page2">
+    <mxGraphModel grid="1" page="1" pageWidth="960" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e0" parent="1" source="s" target="list" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" parent="1" source="list" target="g" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" parent="1" source="g" target="log" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=1.0;exitY=0.5;entryX=0.0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" parent="1" source="log" target="end" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e4" parent="1" source="g" target="doc" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" parent="1" source="doc" target="post" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" parent="1" source="post" target="ok" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" parent="1" source="ok" target="err" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=1.0;exitY=0.5;entryX=0.0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e8" parent="1" source="ok" target="next" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9" parent="1" source="err" target="next" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.5;exitY=1.0;entryX=1.0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="710" y="845" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" parent="1" source="next" target="g" edge="1" style="endArrow=block;endFill=1;rounded=0;strokeColor=#567480;exitX=0.0;exitY=0.5;entryX=0.0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="102" y="845" />
+              <mxPoint x="102" y="312" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s" parent="1" vertex="1" value="◷" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;ellipse;fillColor=#ffffff;strokeWidth=1.5;">
+          <mxGeometry as="geometry" x="330" y="54" width="40" height="40" />
+        </mxCell>
+        <mxCell id="list" parent="1" vertex="1" value="Получить активные брони&lt;br&gt;и выделить просроченные" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rounded=1;fillColor=#e8f4ee;">
+          <mxGeometry as="geometry" x="214" y="139" width="272" height="69" />
+        </mxCell>
+        <mxCell id="g" parent="1" vertex="1" value="×" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rhombus;fillColor=#ffffff;fontSize=22;">
+          <mxGeometry as="geometry" x="323" y="285" width="53" height="53" />
+        </mxCell>
+        <mxCell id="log" parent="1" vertex="1" value="Записать итог запуска&lt;br&gt;в журнал регистрации" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rounded=1;fillColor=#e8f4ee;">
+          <mxGeometry as="geometry" x="590" y="277" width="252" height="69" />
+        </mxCell>
+        <mxCell id="end" parent="1" vertex="1" value="" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;ellipse;fillColor=#ffffff;strokeWidth=4;">
+          <mxGeometry as="geometry" x="696" y="393" width="40" height="40" />
+        </mxCell>
+        <mxCell id="doc" parent="1" vertex="1" value="Создать «Отмену брони»&lt;br&gt;на доступный остаток резерва" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rounded=1;fillColor=#e8f4ee;">
+          <mxGeometry as="geometry" x="200" y="419" width="300" height="69" />
+        </mxCell>
+        <mxCell id="post" parent="1" vertex="1" value="Провести отмену с причиной&lt;br&gt;истечения срока" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rounded=1;fillColor=#e8f4ee;">
+          <mxGeometry as="geometry" x="210" y="543" width="280" height="69" />
+        </mxCell>
+        <mxCell id="ok" parent="1" vertex="1" value="×" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rhombus;fillColor=#ffffff;fontSize=22;">
+          <mxGeometry as="geometry" x="323" y="681" width="53" height="53" />
+        </mxCell>
+        <mxCell id="err" parent="1" vertex="1" value="Запомнить ошибку&lt;br&gt;по этой брони" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rounded=1;fillColor=#e8f4ee;">
+          <mxGeometry as="geometry" x="590" y="673" width="239" height="69" />
+        </mxCell>
+        <mxCell id="next" parent="1" vertex="1" value="×" style="fontFamily=Arial;fontSize=16;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontColor=#1b3243;strokeColor=#006b61;rhombus;fillColor=#ffffff;fontSize=22;">
+          <mxGeometry as="geometry" x="323" y="818" width="53" height="53" />
+        </mxCell>
+        <mxCell id="l0" parent="1" value="Каждый час" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="432" y="64" width="107" height="23" />
+        </mxCell>
+        <mxCell id="l1" parent="1" value="Есть следующая просроченная бронь?" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="419" y="249" width="310" height="23" />
+        </mxCell>
+        <mxCell id="l2" parent="1" value="Нет" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="440" y="279" width="74" height="23" />
+        </mxCell>
+        <mxCell id="l3" parent="1" value="Да" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="342" y="365" width="74" height="23" />
+        </mxCell>
+        <mxCell id="l4" parent="1" value="Проведена?" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="375" y="660" width="108" height="23" />
+        </mxCell>
+        <mxCell id="l5" parent="1" value="Нет" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="445" y="675" width="74" height="23" />
+        </mxCell>
+        <mxCell id="l6" parent="1" value="Да" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="342" y="774" width="74" height="23" />
+        </mxCell>
+        <mxCell id="l7" parent="1" value="Следующая бронь" vertex="1" style="text;align=center;verticalAlign=middle;fontSize=16;fontColor=#1b3243;">
+          <mxGeometry as="geometry" x="127" y="810" width="156" height="23" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

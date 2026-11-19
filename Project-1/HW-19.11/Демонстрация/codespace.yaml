@@ -1,0 +1,7 @@
+services:
+  workspace:
+    image: mcr.microsoft.com/devcontainers/base:bookworm
+    command: sleep infinity
+    network_mode: service:redmine
+    volumes:
+      - ../../..:/workspaces/ProjectsControl:cached

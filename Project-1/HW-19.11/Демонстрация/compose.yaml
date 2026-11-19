@@ -1,0 +1,23 @@
+name: voltmarket-defense
+services:
+  redmine:
+    image: redmine:6
+    ports:
+      - "127.0.0.1:3089:3000"
+    volumes:
+      - ../:/homework:ro
+      - ./redmine/home.html.erb:/usr/src/redmine/app/views/welcome/index.html.erb:ro
+      - database:/usr/src/redmine/sqlite
+      - attachments:/usr/src/redmine/files
+    environment:
+      REDMINE_LANG: ru
+    command: ["bundle", "exec", "bash", "/homework/Демонстрация/redmine/start.sh"]
+    healthcheck:
+      test: ["CMD", "ruby", "-rnet/http", "-e", "exit(Net::HTTP.get_response(URI('http://127.0.0.1:3000/projects/voltmarket/wiki')).code == '200' ? 0 : 1)"]
+      interval: 10s
+      timeout: 5s
+      start_period: 120s
+      retries: 12
+volumes:
+  database:
+  attachments:

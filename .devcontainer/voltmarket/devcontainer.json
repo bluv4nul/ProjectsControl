@@ -1,0 +1,15 @@
+{
+  "name": "ВольтМаркет — защита в Redmine",
+  "dockerComposeFile": [
+    "../../Project-1/HW-19.11/Демонстрация/compose.yaml",
+    "../../Project-1/HW-19.11/Демонстрация/codespace.yaml"
+  ],
+  "service": "workspace",
+  "runServices": ["redmine", "workspace"],
+  "workspaceFolder": "/workspaces/ProjectsControl",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {"label": "ВольтМаркет · Redmine", "onAutoForward": "openBrowser"}
+  },
+  "shutdownAction": "stopCompose"
+}
